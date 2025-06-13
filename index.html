@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Catch The Insect</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+   <div class="screen">
+    <h1>Catch The Insect</h1>
+    <button class="btn" id="start-btn">Play Game</button>
+  </div>
+
+  <div class="screen">
+    <h1>Select Difficulty</h1>
+    <div class="difficulty-options">
+      <button class="btn difficulty" data-speed="2000">Easy</button>
+      <button class="btn difficulty" data-speed="1500">Medium</button>
+      <button class="btn difficulty" data-speed="1000">Hard</button>
+      <button class="btn difficulty" data-speed="500">Impossible</button>
+    </div>
+  </div>
+
+  <div class="screen">
+    <h1>Which Insect Do You Want to Catch?</h1>
+    <ul class="insects-list">
+      <li>
+        <button class="choose-insect-btn">
+          <p>Fly</p>
+          <img src="https://pngimg.com/uploads/fly/fly_PNG3946.png" alt="fly" />
+        </button>
+      </li>
+       <li>
+      <button class="choose-insect-btn">
+        <p>Mosquito</p>
+        <img decoding="async" src="http://pngimg.com/uploads/mosquito/mosquito_PNG18175.png" alt="mosquito" />
+      </button>
+    </li>
+      <li>
+        <button class="choose-insect-btn">
+          <p>Spider</p>
+          <img src="https://pngimg.com/uploads/spider/spider_PNG12.png" alt="spider" />
+        </button>
+      </li>
+      <li>
+        <button class="choose-insect-btn">
+          <p>Cockroach </p>
+          <img src="https://pngimg.com/uploads/roach/roach_PNG12163.png" alt="roach" />
+        </button>
+      </li>
+    </ul>
+  </div>
+
+  <div class="screen game-container" id="game-container">
+    <h3 id="time" class="time">Time: 00:00</h3>
+    <h3 id="score" class="score">Score: 0</h3>
+    <div class="game-controls">
+  <button id="pause-btn" class="btn">Pause</button>
+  <button id="restart-btn" class="btn">Restart</button>
+  <button id="reset-btn" class="btn">Reset</button>
+</div>
+
+    <h5 id="message" class="message">
+      Are you annoyed yet? <br />You are playing an impossible game!
+    </h5>
+  </div>
+
+  <div class="screen" id="end-screen">
+    <h2>Game Over</h2>
+    <h3 id="high-score">High Score: 0</h3>
+    <button class="btn" onclick="location.reload()">Play Again</button>
+  </div>
+
+  <audio id="squish-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-quick-jump-arcade-game-239.wav"></audio>
+
+  <script src="app.js"></script>
+</body>
+</html>
